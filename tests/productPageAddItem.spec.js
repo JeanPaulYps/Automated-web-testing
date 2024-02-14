@@ -1,6 +1,6 @@
 import { expect, test } from "@playwright/test";
 
-test("Example", async ({ page }) => {
+test("Checkout test", async ({ page }) => {
   await page.goto("/");
   const addToBasketButton = await page
     .locator('[data-qa="product-button"]')

@@ -3,7 +3,7 @@ import { getLoginToken } from "../api-calls/getLoginToken";
 import { adminDetails } from "../data/userDetails";
 import { MyAccountPage } from "../page-objects/MyAccount";
 
-test.only("My account using cookie injection", async ({ page }) => {
+test("My account using cookie injection", async ({ page }) => {
   const myAccount = new MyAccountPage(page);
   const { username, password } = adminDetails;
   const loginToken = await getLoginToken(username, password);
