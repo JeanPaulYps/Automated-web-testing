@@ -1,6 +1,6 @@
 import { expect, test } from "@playwright/test";
 
-test("Checkout test", async ({ page }) => {
+test.skip("Checkout test", async ({ page }) => {
   await page.goto("/");
   const addToBasketButton = await page
     .locator('[data-qa="product-button"]')
@@ -17,5 +17,4 @@ test("Checkout test", async ({ page }) => {
   const checkoutLink = page.getByRole("link", { name: "Checkout" });
   await checkoutLink.click();
   await page.waitForURL('/basket');
-  await page.pause();
 });

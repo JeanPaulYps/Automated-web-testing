@@ -9,7 +9,7 @@ test("My account using cookie injection", async ({ page }) => {
   const loginToken = await getLoginToken(username, password);
 
   await page.route(
-    "http://localhost:2221/api/user?id=5c43710c-9258-476f-bc19-b648fe9aeac7",
+    "http://localhost:2221/api/user?id=3d28d66f-0e13-4564-b6d2-5f0ae7895011",
     async (route) => {
       await route.fulfill({
         status: 500,

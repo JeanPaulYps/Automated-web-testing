@@ -26,7 +26,6 @@ test("New user full end-to-end test journey", async ({ page }) => {
   await productPage.addProductToBasket(2);
 
   await navigation.goToCheckout();
-  // await page.pause();
 
   await checkout.removeCheapestProduct();
   await checkout.continueToCheckout();
@@ -44,6 +43,4 @@ test("New user full end-to-end test journey", async ({ page }) => {
   await paymentPage.activateDiscount();
   await paymentPage.fillPaymentDetails(paymentDetails);
   await paymentPage.completePayment()
-
-  await page.pause();
 });
